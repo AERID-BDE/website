@@ -22,7 +22,9 @@ app.use(express.urlencoded({extended: false}));
 
 /* ---------------------------------- routes ------------------------------------- */
 
+require('./src/routes/auth')(app);
 require('./src/routes/home')(app);
+
 
 app.use((req, res) => {
     res.redirect('/');
