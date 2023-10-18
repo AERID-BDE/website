@@ -1,0 +1,48 @@
+body {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: sticky;
+    top: 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+li {
+    display: inline;
+}
+
+li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 20px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+.active {
+    color: white;
+    border-bottom: 2px solid #fff;
+}
+
+.aeridtitle {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    color: white;
+    text-transform: uppercase;
+    margin: 20px 0;
+}
