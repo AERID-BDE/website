@@ -11,26 +11,26 @@
     </div>
     <div class="event-list">
         <% events.forEach(event => { %>
-        <div class="event-card">
-            <div class="image">
-                <img src="<%= event.image %>" alt="Image de l'évènement">
-            </div>
+            <div class="event-card">
+                <div class="image">
+                    <img src="<%= event.image %>" alt="Image de l'évènement">
+                </div>
 
-            <div class="data">
-                <div class="title">
-                    <p><%= event.title %></p>
-                </div>
-                <div class="date">
-                    <p><%= event.eventDate %></p>
-                </div>
-                <div class="location">
-                    <p><%= event.location %></p>
-                </div>
-                <div class="price">
-                    <p><%= event.price %></p>
+                <div class="data">
+                    <div class="name">
+                        <p><%= event.title %></p>
+                    </div>
+                    <div class="date">
+                        <p><%= event.eventDate.toLocaleString() %>
+                    </div>
+                    <div class="location">
+                        <p><%= event.location %></p>
+                    </div>
+                    <div class="price">
+                        <p><%= event.price %></p>
+                    </div>
                 </div>
             </div>
-        </div>
         <% }) %>
     </div>
 </div>

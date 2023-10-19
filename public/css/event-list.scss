@@ -2,6 +2,19 @@
 
 .events-container {
   margin-top: $navbarHeight;
-  overflow: auto;
+  overflow: scroll;
   max-height: calc(100vh - #{$navbarHeight});
+
+  .title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 20px 0;
+  }
+
+  .event-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }

@@ -12,7 +12,7 @@
   flex-direction: row;
 
   .image {
-    width: 100%;
+    width: 60%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,7 +25,7 @@
   }
 
   .data {
-    width: 100%;
+    width: 40%;
     display: flex;
     align-items: center;
     flex-direction: column;
