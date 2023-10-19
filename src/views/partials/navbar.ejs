@@ -1,15 +1,27 @@
+<%- include("./head") %>
+<link rel="stylesheet" href="/css/navbar.css" type="text/css">
+
 <header>
-    <ul>
-        <div class="logo">
-            <img src="../../../public/img/Logo_BDE.png" alt="Logo BDE">
+    <div class="menu">
+        <div class="left-part">
+            <img src="/img/Logo_BDE.png" alt="Logo BDE">
         </div>
-        <div>
-            <h1 class="aeridtitle">BDE AERID by Hesias</h1>
+        <div class="center-part">
+            <div class="title">
+                <h1>BDE AERID by Hesias</h1>
+            </div>
+            <div class="navbar">
+                <ul>
+                    <li><a class="active" href="/">Accueil</a></li>
+                    <li><a href="/products">Produits</a></li>
+                    <li><a href="/events">Évènements</a></li>
+                </ul>
+            </div>
         </div>
-        <li><a class="active" href="#home">Accueil</a></li>
-        <li><a href="#product">Produits</a></li>
-        <li><a href="#events">Events</a></li>
-        <li><a href="#events">Contact</a></li>
-        <li class="nav-item-fixed-right"><a href="#login">Login</a></li>
-    </ul>
+        <div class="right-part">
+            <div class="login">
+                <a href="/login">Connexion</a>
+            </div>
+        </div>
+    </div>
 </header>
