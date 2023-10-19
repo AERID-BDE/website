@@ -5,10 +5,10 @@ const AdminGuard = require('../guards/AdminGuard');
 const router = express.Router();
 
 module.exports = (app) => {
-    router.get('/', AdminGuard.checkIsAdmin, ProductController.showAll);
+    router.get('/',  ProductController.showAll);
 
-    router.get('/new', AdminGuard.checkIsAdmin, ProductController.showAdd);
-    router.post('/new', AdminGuard.checkIsAdmin, ProductController.handleAdd);
+    router.get('/new', ProductController.showAdd);
+    router.post('/new', ProductController.handleAdd);
 
-    app.use('/admin/products', router);
+    app.use('/admin/products', AdminGuard.checkIsAdmin, router);
 }

@@ -1,11 +1,11 @@
-<link rel="stylesheet" href="/css/admin.new-event.css" type="text/css">
+<link rel="stylesheet" href="/css/admin.home.css" type="text/css">
 
-<%- include("../../partials/navbar") %>
+<!--<%- include("../../../partials/navbar") %>-->
 
 <h2>Ajouter un nouvel événement</h2>
 
 <div>
-    <form method="post" action="/events/new">
+    <form method="post" action="/admin/events/new">
         <label for="title">Titre de l'évenement</label>
         <input type="text" id="title" name="title" placeholder="Titre de l'évenement">
 
@@ -25,7 +25,7 @@
         <input type="text" id="image" name="image" placeholder="URL de l'image">
 
         <button type="submit">Créer</button>
-        <a href="/" >Annuler</a>
+        <a href="/admin/events" >Annuler</a>
 
     </form>
 </div>

@@ -6,10 +6,10 @@ const AdminGuard = require('../guards/AdminGuard');
 const router = express.Router();
 
 module.exports = (app) => {
-    router.get('/', AdminGuard.checkIsAdmin, EventController.showAll);
+    router.get('/',  EventController.showAll);
 
-    router.get('/new', AdminGuard.checkIsAdmin, EventController.showAddEvent);
-    router.post('/new', AdminGuard.checkIsAdmin, EventController.addEvent);
+    router.get('/new',  EventController.showAddEvent);
+    router.post('/new',  EventController.addEvent);
 
     app.use('/admin/events', router);
 }

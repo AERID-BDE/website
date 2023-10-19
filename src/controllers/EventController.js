@@ -21,7 +21,7 @@ class EventController {
             location
         })
         await event.save().catch(err => console.error(err))
-        res.redirect('/')
+        res.redirect('/admin/events')
     }
 
 }
