@@ -1,3 +1,30 @@
 <%- include("../../partials/head") %>
 
-<div> List of product</div>
+<body>
+<div class="products-container page">
+    <div class="container-head">
+        <div class="title">
+            <h1>Tout nos produits</h1>
+        </div>
+    </div>
+    <div class="product-card">
+        <div class="product-list">
+            <% products.forEach(function(product){ %>
+                <div class="name">
+                    <p><%= product.name %></p>
+                </div>
+                <div class="price">
+                    <p>Prix: <%= product.price %>€</p>
+                </div>
+            <div class="image">
+                <img src="<%= product.image %>" alt="product image">
+            </div>
+                <% }) %>
+                <div class="new">
+                    <a class="button info-button" href="/products/new">Ajout d'un produit</a>
+                </div>
+        </div>
+    </div>
+</div>
+</div>
+</body>

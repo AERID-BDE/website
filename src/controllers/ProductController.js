@@ -1,8 +1,10 @@
 const Product = require('../models/Product');
 
 class ProductController {
-    showAll(req, res) {
-        res.render('product/index')
+    async showAll(req, res) {
+        const products = await Product.find({}).catch(err => console.error(err));
+        res.render('product/index', {products})
+
     }
 
     showAdd(req, res) {
