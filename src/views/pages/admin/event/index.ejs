@@ -8,18 +8,16 @@
 </div>
 
 <div>
-
     <% events.forEach( event => { %>
-
         <div>
+
             <h2><%= event.title %></h2>
             <p>Prix : <%= event.price %></p>
             <p> <%= event.eventDate %></p>
             <p>Lieu : <%= event.location %></p>
             <p>Description de l'événement : <%= event.description %></p>
             <img src="<%= event.image %>" alt="Image evenement">
-
-            <a href="/admin/events/edit">Editer</a>
+            <a href="/admin/events/<%= event.id %>/edit">Editer</a>
 
         </div>
 

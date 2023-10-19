@@ -1,4 +1,5 @@
 const Event = require('../models/Event')
+const events = require("events");
 
 class EventController {
     async showAll(req, res){
@@ -21,6 +22,17 @@ class EventController {
             location
         })
         await event.save().catch(err => console.error(err))
+        res.redirect('/admin/events')
+    }
+
+    async showEditEvent(req, res) {
+        const myEvent = await Event.findById(req.params.id).catch(err => console.error(err))
+        console.log(myEvent)
+        res.render('admin/event/edit', { myEvent })
+    }
+    async editEvent (req,res,next) {
+        const editedEventForm = req.body
+        await Event.findByIdAndUpdate(req.params.id, editedEventForm)
         res.redirect('/admin/events')
     }
 

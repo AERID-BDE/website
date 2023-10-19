@@ -18,7 +18,7 @@ class AuthController {
                 }
                 else {
                     req.session.user = user;
-                    res.redirect('/');
+                    res.redirect('/admin');
                 }
             });
         } else {
