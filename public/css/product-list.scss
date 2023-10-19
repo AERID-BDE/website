@@ -4,4 +4,17 @@
   margin-top: $navbarHeight;
   overflow: auto;
   max-height: calc(100vh - #{$navbarHeight});
+
+  .title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 20px 0;
+  }
+
+  .product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }

@@ -1,0 +1,44 @@
+@import "variables";
+@import "init";
+
+.product-card {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  margin: 10px;
+  width: 400px;
+  height: 200px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+
+  .image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      border-radius: 10px;
+    }
+  }
+
+  .data {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    .name {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .price {
+      font-family: Raleway-ThinItalic, serif;
+      font-size: 1.2rem;
+    }
+  }
+}

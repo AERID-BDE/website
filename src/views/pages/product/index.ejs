@@ -1,29 +1,30 @@
 <link rel="stylesheet" href="/css/product-list.css" type="text/css">
+<link rel="stylesheet" href="/css/product-card.css" type="text/css">
 
 <%- include("../../partials/navbar") %>
 
 <div class="products-container page">
     <div class="container-head">
         <div class="title">
-            <h1>Tout nos produits</h1>
+            <h1>Nos produits en vente</h1>
         </div>
     </div>
-    <div class="product-card">
-        <div class="product-list">
-            <% products.forEach(function(product){ %>
-                <div class="name">
-                    <p><%= product.name %></p>
+    <div class="product-list">
+        <% products.forEach(function(product){ %>
+            <div class="product-card">
+                <div class="image">
+                    <img src="<%= product.image %>" alt="Image du produit">
                 </div>
-                <div class="price">
-                    <p>Prix: <%= product.price %>€</p>
+
+                <div class="data">
+                    <div class="name">
+                        <p><%= product.name %></p>
+                    </div>
+                    <div class="price">
+                        <p>Prix: <%= product.price %>€</p>
+                    </div>
                 </div>
-            <div class="image">
-                <img src="<%= product.image %>" alt="product image">
             </div>
-                <% }) %>
-                <div class="new">
-                    <a class="button info-button" href="/products/new">Ajout d'un produit</a>
-                </div>
-        </div>
+        <% }) %>
     </div>
 </div>

@@ -11,7 +11,7 @@
 
   .left-part {
     float: left;
-    width: 10%;
+    width: 10vw;
     height: 100%;
     display: flex;
     align-items: center;
@@ -24,21 +24,22 @@
 
   .center-part {
     float: left;
-    width: 80%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-
+    width: 80vw;
+    height: inherit;
+    display: block;
+    position: relative;
 
     .title {
-      height: 60%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
       display: flex;
       align-items: center;
       justify-content: center;
 
       h1 {
-        text-align: center;
-        font-size: 36px;
+        font-size: 2.5rem;
         font-weight: 700;
         color: $titleColor;
         text-transform: uppercase;
@@ -46,36 +47,45 @@
       }
     }
 
-    ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      position: sticky;
-      top: 0;
-      text-align: center;
-      font-size: 1.2rem;
+    .navbar {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
 
-      li {
-        display: inline;
-        margin: 10px;
 
-        a {
-          display: inline-block;
-          color: $itemColor;
-          text-align: center;
-          padding: 20px 16px;
-          text-decoration: none;
+      ul {
+        list-style-type: none;
+        text-align: center;
+        font-size: 1.2rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        li {
+          line-height: 3rem;
+          margin: 0 10px;
+          padding: 0 10px;
+          display: flex;
+          align-items: center;
+          height: inherit;
           transition: background-color 0.3s, color 0.3s;
-
-          &:hover {
-            background-color: $hoverItemColor;
-
-          }
+          border-bottom: 4px solid transparent;
 
           &.active {
             color: $selectItemColor;
             border-bottom: 4px solid $selectItemColor;
+          }
+
+          &:hover {
+            background-color: $hoverItemColor;
+          }
+
+          a {
+            color: $itemColor;
+            text-align: center;
+            text-decoration: none;
           }
         }
       }
@@ -84,8 +94,8 @@
 
   .right-part {
     float: left;
-    width: 10%;
-    height: 100%;
+    width: 10vw;
+    height: inherit;
     display: flex;
     align-items: center;
     justify-content: center;
