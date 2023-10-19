@@ -1,6 +1,6 @@
 class AdminGuard {
 
-    checkUserLogged(req, res, next) {
+    checkIsAdmin(req, res, next) {
         const baseUrl = req?.baseUrl;
         const isAdmin = req?.session?.user ? req.session.user.isAdmin : false;
 
@@ -19,3 +19,5 @@ class AdminGuard {
         }
     }
 }
+
+module.exports = new AdminGuard();

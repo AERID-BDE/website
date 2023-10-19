@@ -6,8 +6,5 @@ const router = express.Router();
 module.exports = (app) => {
     router.get('/', ProductController.showAll);
 
-    router.get('/new', ProductController.showAdd);
-    router.post('/new', ProductController.handleAdd);
-
     app.use('/products', router);
 }

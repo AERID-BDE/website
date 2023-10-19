@@ -37,6 +37,8 @@ require('./src/routes/home')(app);
 require('./src/routes/event')(app);
 require('./src/routes/product')(app);
 require('./src/routes/admin.home')(app);
+require('./src/routes/admin.event')(app);
+require('./src/routes/admin.product')(app);
 
 
 app.use((req, res) => {
