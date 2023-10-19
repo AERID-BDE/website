@@ -1,16 +1,18 @@
-    require('dotenv').config();
+require('dotenv').config();
 
 const mongoose = require('mongoose')
 const express = require('express');
 const path = require('path');
 const sassMiddleware = require('node-sass-middleware');
+const cookieParser = require('cookie-parser');
+const sessions = require('express-session');
 
 const app = express();
 
 /* --------------------------------- mongoose ------------------------------------- */
 
 mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@${process.env.DB_HOST}/${process.env.DB_NAME}?retryWrites=true&w=majority`,
-    { useNewUrlParser: true, useUnifiedTopology: true });
+    {useNewUrlParser: true, useUnifiedTopology: true});
 
 /* --------------------------------- express ------------------------------------- */
 
@@ -29,6 +31,14 @@ app.use(
 );
 
 app.use(express.urlencoded({extended: false}));
+
+app.use(sessions({
+    secret: process.env.SESSION_SECRET,
+    saveUninitialized: true,
+    cookie: { maxAge:  1000 * 60 * 60 * 24 },
+    resave: false
+}));
+app.use(cookieParser());
 
 /* ---------------------------------- routes ------------------------------------- */
 

@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="/css/login.css" type="text/css">
+
+<%- include('../../partials/head'); %>
+<%- include('../../partials/navbar'); %>
+
+<div class="login-container container">
+    <div class="title">
+        <h1>Login</h1>
+    </div>
+    <div class="login-form form">
+
+        <p class="title">Login</p>
+
+        <div class="error">
+            <% if (error) { %>
+                <p><%= error %></p>
+            <% } %>
+        </div>
+
+        <form action="/auth/login" method="post">
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" required>
+            </div>
+            <div class="buttons">
+                <button class="button confirm-button" type="submit">Login</button>
+                <a class="button secondary-button" href="/products">Product list</a>
+            </div>
+        </form>
+    </div>
+</div>
