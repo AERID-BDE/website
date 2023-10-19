@@ -8,7 +8,7 @@ class ProductController {
     }
 
     showAdd(req, res) {
-        res.render('product/admin.new')
+        res.render('admin/product/new')
     }
 
     async handleAdd(req, res, next) {

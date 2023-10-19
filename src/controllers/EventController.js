@@ -7,7 +7,7 @@ class EventController {
     }
 
     showAddEvent(req, res){
-        res.render('event/admin.new')
+        res.render('admin/event/new')
     }
 
     async addEvent(req, res){
