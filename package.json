@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "node .",
     "watch": "nodemon .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "watch:sass": "node-sass --output-style compressed -w public/css -o static/css"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +16,8 @@
     "ejs": "^3.1.9",
     "express": "^4.18.2",
     "mongoose": "^7.6.3",
+    "node-sass": "^9.0.0",
+    "node-sass-middleware": "^1.1.0",
     "nodemon": "^3.0.1"
   },
   "description": ""
