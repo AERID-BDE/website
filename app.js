@@ -3,6 +3,7 @@
 const mongoose = require('mongoose')
 const express = require('express');
 const path = require('path');
+const sassMiddleware = require('node-sass-middleware');
 
 const app = express();
 
@@ -16,7 +17,16 @@ mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'src', 'views', 'pages'));
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'static')));
+
+app.use(
+    sassMiddleware({
+        src: path.join(__dirname, 'public'),
+        dest: path.join(__dirname, 'static'),
+        debug: true,
+        outputStyle: 'compressed',
+    })
+);
 
 app.use(express.urlencoded({extended: false}));
 
