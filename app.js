@@ -1,4 +1,4 @@
-require('dotenv').config();
+    require('dotenv').config();
 
 const mongoose = require('mongoose')
 const express = require('express');
@@ -24,6 +24,7 @@ app.use(express.urlencoded({extended: false}));
 
 require('./src/routes/auth')(app);
 require('./src/routes/home')(app);
+require('./src/routes/product')(app);
 
 
 app.use((req, res) => {
