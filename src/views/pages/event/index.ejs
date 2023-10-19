@@ -3,19 +3,36 @@
 
 <%- include("../../partials/navbar") %>
 
-<a href="/admin/events/new">Créer un évenements</a>
-
 <div class="events-container">
-    <% events.forEach( event => { %>
-
-        <div class="event-card">
-            <h2><%= event.title %></h2>
-            <p>Prix : <%= event.price %></p>
-            <p class="date"> <%= event.eventDate %></p>
-            <p class="location">Lieu : <%= event.location %></p>
-            <p>Description de l'événement : <%= event.description %></p>
-            <img src="<%= event.image %>" alt="Image evenement">
+    <div class="container-head">
+        <div class="title">
+            <h1>Nos événements</h1>
         </div>
+    </div>
+    <div class="event-list">
+        <% events.forEach(event => { %>
+        <div class="event-card">
+            <div class="image">
+                <img src="<%= event.image %>" alt="Image de l'évènement">
+            </div>
 
-    <% }) %>
+            <div class="data">
+                <div class="title">
+                    <p><%= event.title %></p>
+                </div>
+                <div class="date">
+                    <p><%= event.eventDate %></p>
+                </div>
+                <div class="location">
+                    <p><%= event.location %></p>
+                </div>
+                <div class="price">
+                    <p><%= event.price %></p>
+                </div>
+            </div>
+        </div>
+        <% }) %>
+    </div>
 </div>
+
+

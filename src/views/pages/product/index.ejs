@@ -3,14 +3,14 @@
 
 <%- include("../../partials/navbar") %>
 
-<div class="products-container page">
+<div class="products-container">
     <div class="container-head">
         <div class="title">
             <h1>Nos produits en vente</h1>
         </div>
     </div>
     <div class="product-list">
-        <% products.forEach(function(product){ %>
+        <% products.forEach(product => { %>
             <div class="product-card">
                 <div class="image">
                     <img src="<%= product.image %>" alt="Image du produit">
