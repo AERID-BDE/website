@@ -2,4 +2,6 @@
 
 .products-container {
   margin-top: $navbarHeight;
+  overflow: auto;
+  max-height: calc(100vh - #{$navbarHeight});
 }
