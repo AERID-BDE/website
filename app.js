@@ -35,7 +35,7 @@ app.use(express.urlencoded({extended: false}));
 require('./src/routes/auth')(app);
 require('./src/routes/home')(app);
 require('./src/routes/product')(app);
-
+require('./src/routes/event')(app);
 
 app.use((req, res) => {
     res.redirect('/');
