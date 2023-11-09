@@ -6,6 +6,8 @@ const path = require('path');
 const sassMiddleware = require('node-sass-middleware');
 const cookieParser = require('cookie-parser');
 const sessions = require('express-session');
+const nodemailer = require('nodemailer');
+const config = require('./config');
 
 const app = express();
 
