@@ -1,0 +1,44 @@
+@import "variables";
+
+body {
+  margin-top: $navbarHeight;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-image: url('../../static/img/cover.jpg');
+}
+
+.main-content {
+  padding: 60px 20px;
+}
+
+.hero-section {
+  text-align: center;
+  color: #333;
+  margin-bottom: 40px;
+
+  h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-weight: 700;
+  }
+
+  p {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+
+  .cta-button {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    background-color: #3586ff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+}
