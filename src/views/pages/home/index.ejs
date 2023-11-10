@@ -1,40 +1,6 @@
 <link rel="stylesheet" href="/css/home.css" type="text/css">
 
 <%- include("../../partials/navbar") %>
-<br>
-<div class="contact">
-    <h2>Nous contacter</h2>
-    <p>Une demande de partenariat, une participation, n'hésitez pas à nous écrire !</p>
-    <form id="contact" action="#" method="POST">
-        <div class="flex-container">
-            <div class="form-group">
-                <label class="required" for="name">*Nom : </label>
-                <input id="name" name="name" type="text" value="">
-            </div>
-            <div class="form-group">
-                <label class="required" for="username">*Prénom : </label>
-                <input id="username" name="username" type="text" value="">
-            </div>
-            <div class="form-group">
-                <label for="company">Société : </label>
-                <input id="company" name="company" type="text" value="">
-            </div>
-        </div>
-        <div class="form-group">
-            <label class="required" for="email">*Email : </label>
-            <input id="email" name="email" type="email" value="">
-        </div>
-        <div class="form-group">
-            <label class="required" for="objet">*Objet : </label>
-            <input id="objet" name="objet" type="text" value="" placeholder="Evenement">
-        </div>
-        <div class="form-group">
-            <label class="required" for="description">*Description : </label>
-            <textarea id="description" name="description" rows="5" cols="33" placeholder="Bonjour, nous souhaiterions organiser un ..."></textarea>
-        </div>
 
-        <input id="submit" type="submit" value="Envoyer" />
-    </form>
-</div>
 
 <%- include("../../partials/footer") %>
