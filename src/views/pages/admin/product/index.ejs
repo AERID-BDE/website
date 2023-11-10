@@ -2,3 +2,22 @@
 
 <%- include("../../../partials/navbar") %>
 <%- include("../../../partials/admin/navbar.ejs") %>
+
+<br>
+<div>
+    <a href="/admin/products/new">Ajouter un produit</a>
+</div>
+
+<div>
+    <% products.forEach( product => { %>
+        <div>
+
+            <h2><%= product.name %></h2>
+            <p>Prix : <%= product.price %></p>
+            <img src="<%= product.image %>" alt="Image evenement">
+            <a href="/admin/products/<%= product.id %>/edit">Editer</a>
+
+        </div>
+
+    <% }) %>
+</div>

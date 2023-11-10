@@ -1,14 +1,19 @@
 const express = require('express');
-const ProductController = require('../controllers/ProductController');
 const AdminGuard = require('../guards/AdminGuard');
+const AdminProductController = require('../controllers/AdminProductController')
+
+
 
 const router = express.Router();
 
 module.exports = (app) => {
-    router.get('/',  ProductController.showAll);
+    router.get('/',  AdminProductController.showAll);
 
-    router.get('/new', ProductController.showAdd);
-    router.post('/new', ProductController.handleAdd);
+    router.get('/new', AdminProductController.showAddProduct);
+    router.post('/new', AdminProductController.addProduct);
+
+    router.get('/:id/edit',  AdminProductController.showEditProduct);
+    router.post('/:id/edit',  AdminProductController.editProduct);
 
     app.use('/admin/products', AdminGuard.checkIsAdmin, router);
 }

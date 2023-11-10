@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="/css/admin.home.css" type="text/css">
+
+<!--<%- include("../../../partials/navbar") %>-->
+
+<h2>Editer un produit</h2>
+
+<div>
+    <form method="post" action="/admin/products/edit">
+        <label for="name">Nom</label>
+        <input type="text" id="name" name="name" value="<%= myProduct.name %>">
+
+        <label for="price">Prix</label>
+        <input type="number" step="0,01" id="price" name="price" value="<%= myProduct.price %>">
+
+        <label for="image">URL de l'image</label>
+        <input type="text" id="image" name="image" value="<%= myProduct.image %>">
+
+        <label for="archived">Archivage</label>
+        <input type="number" id="archived" name="archived" value="<%= myProduct.archived %>">
+
+        <button type="submit">Editer</button>
+        <a href="/admin/products" >Annuler</a>
+
+    </form>
+</div>
